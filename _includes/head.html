@@ -15,4 +15,177 @@
   <link rel="alternate" type="application/rss+xml" href="{{ site.github.url }}/feed.xml" />
   <link rel="stylesheet" href="{{ site.github.url }}/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/2.23.4/mediaelementplayer.min.css">
+  <script>
+      // 以下のJavaScriptコードとCSSはパブリックドメインとします。ご自由にお使いください。
+      // https://turingcomplete.fm/よりコピーさせて頂きました。
+      let player;
+      let key;
+      let chapters = [];
+      
+      function parseTime(str) {
+        let v = /^(?:(\d+):)?(\d+):(\d+)$/.exec(str);
+        if (!v) {
+          return 0;
+        }
+        let h = v[1] ? parseInt(v[1]) : 0;
+        let m = parseInt(v[2]);
+        let s = parseInt(v[3]);
+        return h * 3600 + m * 60 + s;
+      }
+      
+      function saveProgress() {
+        if (player.currentTime > 0) {
+          window.localStorage.setItem('rate', player.playbackRate.toFixed(1));
+          window.localStorage.setItem(key + '.time', player.currentTime);
+        }
+      }
+      
+      
+      function initPlayer() {
+      
+        // Initialize the chapter highlighter.
+        let onplay = () => {
+          player.addEventListener('timeupdate', focusChapter);
+          player.removeEventListener('play', onplay);
+        };
+        player.addEventListener('play', onplay);
+      
+        // When the player is "position: sticky", the bottom border line should be visible.
+        let elem = document.getElementById('player-container');
+        let setBorder = () => {
+          if (elem.getBoundingClientRect().top <= 50) {
+            elem.style.borderBottomColor = '#e0e0e0';
+          } else {
+            elem.style.borderBottomColor = 'white';
+          }
+        };
+      
+        setBorder();
+        window.addEventListener('scroll', setBorder);
+      }
+      
+      function maybeRemoveHashT() {
+        let m = /^#t=([\d:]+)/.exec(window.location.hash);
+        if (m && Math.abs(player.currentTime - parseTime(m[1])) > 15) {
+          let url = window.location.href;
+          url = url.substr(0, url.length - window.location.hash.length);
+          history.replaceState({}, undefined, url);
+        }
+      }
+      
+      function pad(n) {
+        let s = n.toString();
+        return (s.length == 1) ? '0' + s : s;
+      }
+      
+      function formatTime(t) {
+        let h = Math.floor(t / 3600);
+        let m = Math.floor(t % 3600 / 60);
+        let s = pad(Math.floor(t % 60));
+        return h ? `${h}:${pad(m)}:${s}` : `${m}:${s}`;
+      }
+      
+      function addHashT() {
+        history.replaceState({}, undefined, '#t=' + formatTime(player.currentTime));
+      }
+      
+      function getStartTime() {
+        // Parse #t= value.
+        let m = /^#t=([\d:]+)/.exec(window.location.hash);
+        if (m) {
+          return parseTime(m[1]);
+        }
+      
+        // Restore the previous player position.
+        let t = window.localStorage.getItem(key + '.time');
+        return t ? parseInt(t) : 0;
+      }
+      
+      function focusChapter() {
+        let t = player.currentTime;
+      
+        for (let chap of chapters) {
+          if (chap.start <= t && t < chap.end) {
+            chap.li.classList.add('focus');
+          } else {
+            chap.li.classList.remove('focus');
+          }
+        }
+      }
+      
+      document.addEventListener('DOMContentLoaded', () => {
+      
+        let m = /\/([^/]+?)?$/.exec(window.location.pathname);
+        if (!m) {
+          return;
+        }
+      
+        // Initialize the global variables.
+        let id = parseInt(m[1]);
+        player = document.getElementById('player');
+        key = 'episode' + id;
+      
+        initPlayer();
+      
+        // Set click handlers to chapter links.
+        let elms = document.getElementsByClassName('seek');
+        for (let i = 0; i < elms.length; i++) {
+          let elem = elms[i];
+          let start = parseTime(elem.textContent);
+      
+          elem.onclick = () => {
+            player.currentTime = start;
+            player.play();
+            history.replaceState({}, undefined, '#t=' + elem.textContent);
+            return false;
+          };
+      
+          if (chapters.length > 0) {
+            chapters[chapters.length - 1].end = start;
+          }
+          chapters.push({'start': start, 'end': Number.MAX_VALUE, 'li': elem.parentElement})
+        }
+      
+        // Set audio file URL.
+        let elem = document.createElement('source');
+        let time = getStartTime();
+        elem.src = `https://fortegp05.github.io/aozorafm/audio/${id}.mp3#t=${time}`;
+        elem.type = 'audio/mpeg';
+        player.appendChild(elem);
+      
+        if (time > 0) {
+          player.currentTime = time;
+        }
+      
+        window.onunload = saveProgress;
+        window.setInterval(saveProgress, 10000);
+        player.addEventListener('timeupdate', maybeRemoveHashT);
+
+        let relationContentElem = document.querySelectorAll('#AreaRelationContent > ul > li > a');
+        for (let i = 0; i < relationContentElem.length; i++) {
+          relationContentElem[i].target = '_blank';
+        };
+      });
+  </script>
+  <style>
+      #player-container {
+        border-bottom: 1px solid white;
+      
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        transition: border-bottom-color .3s;
+      }
+      .seek {
+        border-bottom: 1px dotted;
+        white-space: nowrap;
+      }
+      
+      .seek:hover {
+        cursor: pointer;
+      }
+      .focus {
+        background-color: cornsilk !important;
+      }
+  </style>
 </head>

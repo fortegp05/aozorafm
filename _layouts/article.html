@@ -17,20 +17,21 @@
             </div>
           </header>
           <section class="card-body markdown">
-            <p>
+            <div id="player-container" style="border-bottom-color: rgb(224, 224, 224);">
               <audio
+                id="player"
                 class="mejs-player"
                 controls=""
                 data-mejsoptions='{"alwaysShowControls": true, "alwaysShowHours": true, "enableAutosize": true, "features": ["playpause", "progress", "current", "duration", "volume", "speed"]}'
                 preload="auto"
-                src="{{ page.audio_file_path | prepend:site.github.url }}"
+                src="{{ page.audio_file_path }}"
                 width="100%"
               >
               </audio>
-            </p>
+            </div>
             <p class="text-right">
               <small>
-                <a href="{{ page.audio_file_path | prepend:site.github.url }}">MP3ファイルをダウンロード</a>
+                <a href="{{ page.audio_file_path }}" target="_blank">MP3ファイルをダウンロード</a>
               </small>
             </p>
             <h2>
@@ -52,7 +53,20 @@
                 </a>
               {% endfor %}
             </div>
-            {{ content }}
+            <h2>
+              チャプター
+            </h2>
+            <ul class="chapters">
+            {% for chaps_id in page.chapter_ids %}
+              {% assign chaps = page.chapter[chaps_id] %}
+              <li>
+                  <span class="seek">{{ chaps.time }}</span>　{{ chaps.title }}
+              </li>
+            {% endfor %}
+            </ul>
+            <div id="AreaRelationContent">
+              {{ content }}
+            </div>
           </section>
           <footer class="article-footer">
             <a class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags={{ site.hashtag }}&url={{ site.github.url }}{{ page.url }}&text={{ page.title }}">
