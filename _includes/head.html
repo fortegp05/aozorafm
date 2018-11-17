@@ -149,6 +149,13 @@
             player.currentTime = start;
             player.play();
             history.replaceState({}, undefined, '#t=' + elem.textContent);
+            if (typeof gtag != 'undefined') {
+                gtag("event", "PlaySeek", {
+                  "event_category": "Audio",
+                  "event_label": player.getAttribute("src"),
+                  "non_interaction": true
+                });
+            }
             return false;
           };
       
