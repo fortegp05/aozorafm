@@ -131,12 +131,16 @@
         if (!m) {
           return;
         }
-      
+
         // Initialize the global variables.
         let id = parseInt(m[1]);
         player = document.getElementById('player');
         key = 'episode' + id;
-      
+
+        if (player == null || player == undefined) {
+          return;
+        }
+
         initPlayer();
       
         // Set click handlers to chapter links.
