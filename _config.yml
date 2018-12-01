@@ -11,6 +11,10 @@ actors:
     image_url: /images/actors/kuwahara_jsri.jpg
     name: くわはら
     url: https://twitter.com/kuwahara_jsri
+  anchor_cable:
+    image_url: /images/actors/anchor_cable.jpg
+    name: 脱脂綿
+    url: https://twitter.com/anchor_cable
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
