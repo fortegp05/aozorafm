@@ -19,6 +19,11 @@ actors:
     image_url: /images/actors/hekitter.jpg
     name: hekitter
     url: https://twitter.com/hekitter
+  MzRyuKa:
+    image_url: /images/actors/hekitter.jpg
+    name: みずりゅ
+    url: https://twitter.com/MzRyuKa
+    
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
