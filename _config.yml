@@ -23,7 +23,38 @@ actors:
     image_url: /images/actors/MzRyuKa.PNG
     name: みずりゅ
     url: https://twitter.com/MzRyuKa
-    
+  oyakata2438:
+    image_url: /images/actors/oyakata2438.jpg
+    name: おやかた
+    url: https://twitter.com/oyakata2438
+  akrolayer:
+    image_url: /images/actors/akrolayer.jpg
+    name: ごまなつ
+    url: https://twitter.com/akrolayer
+  gulDra_cranch:
+    image_url: /images/actors/gulDra_cranch.jpg
+    name: ぐーどらくらんち
+    url: https://twitter.com/gulDra_cranch
+  yk_ichinomiya:
+    image_url: /images/actors/yk_ichinomiya.jpg
+    name: ゆきさん
+    url: https://twitter.com/yk_ichinomiya
+  setoazusa:
+    image_url: /images/actors/setoazusa.jpg
+    name: せとあず
+    url: https://twitter.com/setoazusa
+  erukiti:
+    image_url: /images/actors/erukiti.jpg
+    name: せとあず
+    url: https://twitter.com/erukiti
+  kondoyuko:
+    image_url: /images/actors/kondoyuko.jpg
+    name: kondoyuko
+    url: https://twitter.com/kondoyuko
+  youchan:
+    image_url: /images/actors/youchan.jpg
+    name: kondoyuko
+    url: https://twitter.com/youchan
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
