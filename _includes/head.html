@@ -66,8 +66,10 @@
         let elem = document.getElementById('player-container');
         let setBorder = () => {
           if (elem.getBoundingClientRect().top <= 50) {
-            elem.style.borderBottomColor = '#e0e0e0';
+            elem.style.borderTopColor = 'gray';
+            elem.style.borderBottomColor = 'gray';
           } else {
+            elem.style.borderTopColor = 'white';
             elem.style.borderBottomColor = 'white';
           }
         };
