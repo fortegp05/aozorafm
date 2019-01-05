@@ -66,8 +66,10 @@
         let elem = document.getElementById('player-container');
         let setBorder = () => {
           if (elem.getBoundingClientRect().top <= 50) {
-            elem.style.borderBottomColor = '#e0e0e0';
+            elem.style.borderTopColor = 'gray';
+            elem.style.borderBottomColor = 'gray';
           } else {
+            elem.style.borderTopColor = 'white';
             elem.style.borderBottomColor = 'white';
           }
         };
@@ -133,7 +135,7 @@
         }
 
         // Initialize the global variables.
-        let id = parseInt(m[1]);
+        let id = m[1];
         player = document.getElementById('player');
         key = 'episode' + id;
 
@@ -169,13 +171,8 @@
           chapters.push({'start': start, 'end': Number.MAX_VALUE, 'li': elem.parentElement})
         }
       
-        // Set audio file URL.
-        let elem = document.createElement('source');
+        // Set time.
         let time = getStartTime();
-        elem.src = `https://fortegp05.github.io/aozorafm/audio/${id}.mp3#t=${time}`;
-        elem.type = 'audio/mpeg';
-        player.appendChild(elem);
-      
         if (time > 0) {
           player.currentTime = time;
         }
@@ -192,11 +189,17 @@
   </script>
   <style>
       #player-container {
+        height: 70px;
+        padding-top: 20px;
         border-bottom: 1px solid white;
-      
+        border-bottom-color: gray;
+        border-top: 1px solid white;
+        border-top-color: gray;
+        background-color: white;
         position: sticky;
         position: -webkit-sticky;
         top: 0;
+        transition: border-top-color .3s;
         transition: border-bottom-color .3s;
       }
       .seek {

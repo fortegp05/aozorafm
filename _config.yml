@@ -45,7 +45,7 @@ actors:
     url: https://twitter.com/setoazusa
   erukiti:
     image_url: /images/actors/erukiti.jpg
-    name: せとあず
+    name: えるきち
     url: https://twitter.com/erukiti
   kondoyuko:
     image_url: /images/actors/kondoyuko.jpg
@@ -53,7 +53,7 @@ actors:
     url: https://twitter.com/kondoyuko
   youchan:
     image_url: /images/actors/youchan.jpg
-    name: kondoyuko
+    name: よう
     url: https://twitter.com/youchan
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
