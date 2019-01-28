@@ -55,6 +55,10 @@ actors:
     image_url: /images/actors/youchan.jpg
     name: よう
     url: https://twitter.com/youchan
+  mamy1326:
+    image_url: /images/actors/mamy1326.jpg
+    name: まみー
+    url: https://twitter.com/mamy1326
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
