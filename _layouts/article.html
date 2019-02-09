@@ -64,14 +64,66 @@
               </li>
             {% endfor %}
             </ul>
+            <h2>
+              ゲストからの告知
+            </h2>
+            <div class="info_area">
+            {% for info_guest_id in page.info_guest_ids %}
+              {% assign info = page.info_guest[info_guest_id] %}
+              <div class="info_card">
+                <a href="{{ info.url }}" target="_blank">
+                  <img src="{{ info.img }}" class="info_image">
+                  <p class="info_title">{{ info.title }}</p>
+                  <p class="info_content">{{ info.content }}</p>
+                </a>
+              </div>
+            {% endfor %}
+            </div>
+            <h2>
+              FORTEからの告知
+            </h2>
+            <div class="info_area">
+                {% for info_author_id in site.info_author_ids %}
+                  {% assign info = site.info_author[info_author_id] %}
+                  <div class="info_card">
+                    <a href="{{ info.url }}" target="_blank">
+                      <img src="{{ info.img }}" class="info_image">
+                      <p class="info_title">{{ info.title }}</p>
+                      <p class="info_content">{{ info.content }}</p>
+                    </a>
+                  </div>
+                {% endfor %}
+                </div>
             <div id="AreaRelationContent">
               {{ content }}
             </div>
+            <h2>
+              『aozora.fm』支援者の紹介(敬称略)
+            </h2>
+            <div>
+              {% for supporter_id in site.supporter_ids %}
+                {% assign supporter = site.supporters[supporter_id] %}
+                <a href="{{ supporter.url }}" class="actor" target="_blank">
+                  <img src="{{ supporter.image_url | prepend:site.github.url }}" alt="{{ supporter.name }}" class="actor-image" width="72" height="72">
+                  <br>
+                  {{ supporter.name }}
+                </a>
+              {% endfor %}
+            </div>
           </section>
           <footer class="article-footer">
-            <a class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags={{ site.hashtag }}&url={{ site.github.url }}{{ page.url }}&text={{ page.title }}">
-              Tweet
-            </a>
+            <div class="info_area">
+                <div style="float: left;">
+                    <a class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags={{ site.hashtag }}&url={{ site.github.url }}{{ page.url }}&text={{ page.title }}">
+                      Tweet
+                    </a>
+                  </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfR5ZjmZf2N5hr53SR_Q5yB6d02VtgFdNgnMFgcUwW049OGDg/viewform" target="_blank">
+                  <div class="letter_btn">
+                    おたより
+                  </div>
+                </a>
+            </div>
           </footer>
         </article>
       </div>

@@ -83,3 +83,35 @@ sass:
 timezone: Asia/Tokyo
 title: aozora.fm
 url: https://fortegp05.github.io/aozorafm/
+foo: hoge
+supporter_ids:
+  - MzRyuKa
+  - yahsan2
+  - goodengineer7
+supporters: 
+  MzRyuKa:
+    image_url: /images/supporters/MzRyuKa.PNG
+    name: みずりゅ
+    url: https://twitter.com/MzRyuKa
+  yahsan2:
+    image_url: /images/supporters/yahsan2.jpg
+    name: みやもと
+    url: https://twitter.com/yahsan2
+  goodengineer7:
+    image_url: /images/supporters/goodengineer7.jpg
+    name: S(エス)
+    url: https://twitter.com/goodengineer7
+info_author_ids:
+  - info1
+  - info2
+info_author:
+  info1:
+    title: poiit
+    content: aozora.fmのスポンサー募集!
+    url: https://poiit.me/FORTEgp05
+    img: https://poiit.me/ogp.jpg
+  info2:
+    title: Podcastコミュニティへの参加募集!
+    content: 詳しくはこちらから。
+    url: https://fortegp05.hatenablog.com/entry/2019/01/07/221830
+    img: https://cdn.image.st-hatena.com/image/scale/8ddad46294804bfb40730d9d691d57ee149cfdf7/backend=imager;enlarge=0;height=1000;version=1;width=1200/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fdefault_entry_og_image%2F152987346%2F1544976200500180
