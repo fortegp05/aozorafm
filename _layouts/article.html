@@ -87,7 +87,7 @@
                   {% assign info = site.info_author[info_author_id] %}
                   <div class="info_card">
                     <a href="{{ info.url }}" target="_blank">
-                      <img src="{{ info.img | prepend:site.github.url }}" class="info_image">
+                      <img src="{{ info.img }}" class="info_image">
                       <p class="info_title">{{ info.title }}</p>
                       <p class="info_content">{{ info.content }}</p>
                     </a>
