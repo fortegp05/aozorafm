@@ -67,6 +67,10 @@ actors:
     image_url: /images/actors/edamametsubu318.jpg
     name: ずんだまる(仮)
     url: https://twitter.com/edamametsubu318
+  a_w_a_n_a:
+    image_url: /images/actors/a_w_a_n_a.jpg
+    name: あわな
+    url: https://twitter.com/a_w_a_n_a
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
