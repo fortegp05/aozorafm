@@ -71,7 +71,11 @@ actors:
     image_url: /images/actors/a_w_a_n_a.jpg
     name: あわな
     url: https://twitter.com/a_w_a_n_a
+  3s_hv:
 author: FORTE
+    image_url: /images/actors/3s_hv.jpg
+    name: VTRyo
+    url: https://twitter.com/3s_hv
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
 email: fortegp05@hotmail.com
