@@ -75,6 +75,10 @@ actors:
     image_url: /images/actors/3s_hv.jpg
     name: VTRyo
     url: https://twitter.com/3s_hv
+  arakawa_gios:
+    image_url: /images/actors/arakawa_gios.png
+    name: Taku
+    url: https://twitter.com/arakawa_gios
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
