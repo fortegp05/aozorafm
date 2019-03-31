@@ -79,6 +79,34 @@ actors:
     image_url: /images/actors/arakawa_gios.png
     name: Taku
     url: https://twitter.com/arakawa_gios
+  nagashi_ma_w:
+    image_url: /images/actors/nagashi_ma_w.jpg
+    name: ながしー
+    url: https://twitter.com/nagashi_ma_w
+  yahsan2:
+    image_url: /images/actors/yahsan2.jpg
+    name: みやもと
+    url: https://twitter.com/yahsan2
+  tkobayashi03:
+    image_url: /images/actors/tkobayashi03.jpg
+    name: tkobayashi
+    url: https://twitter.com/tkobayashi03
+  ebichiki:
+    image_url: /images/actors/ebichiki.png
+    name: ebichiki
+    url: https://twitter.com/ebichiki
+  hmatsu47:
+    image_url: /images/actors/hmatsu47.jpg
+    name: まつ
+    url: https://twitter.com/hmatsu47
+  amarelo_n24:
+    image_url: /images/actors/amarelo_n24.jpg
+    name: amarelo
+    url: https://twitter.com/amarelo_n24
+  goodengineer7:
+    image_url: /images/actors/goodengineer7.jpg
+    name: goodengineer7
+    url: https://twitter.com/goodengineer7
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
@@ -130,8 +158,8 @@ info_author:
   info1:
     title: 「はじめる技術 つづける技術」
     content: 技術書典6にて何かを始める、続けるためのノウハウ本を頒布予定!
-    url: https://twitter.com/search?f=tweets&vertical=default&q=%23%E3%81%AF%E3%81%98%E3%82%81%E3%82%8B%E6%8A%80%E8%A1%93%E3%81%A4%E3%81%A5%E3%81%91%E3%82%8B%E6%8A%80%E8%A1%93&src=typd
-    img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
+    url: https://fortegp05.hatenablog.com/entry/2019/03/28/094500
+    img: https://cdn-ak.f.st-hatena.com/images/fotolife/f/fortegp05/20190327/20190327235022.jpg
   info2:
     title: 「すぱきゃす」への参加募集!
     content: Podcastコミュニティで聴取会や公録など実施中!詳しくはこちら!
@@ -145,5 +173,5 @@ info_author:
   info4:
     title: Kyashでも支援募集中!
     content: クリックでQRコード表示、金額はお気持ちで!
-    url: /images/kyash_qr_fortegp05.JPG
+    url: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
     img: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
