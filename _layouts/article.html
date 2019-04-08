@@ -29,11 +29,23 @@
               >
               </audio>
             </div>
-            <p class="text-right">
-              <small>
-                <a href="{{ page.audio_file_path }}" target="_blank">MP3ファイルをダウンロード</a>
-              </small>
-            </p>
+            <div class="info_area">
+                <div style="float: left;">
+                  <a class="twitter-share-button" href="https://twitter.com/intent/tweet?hashtags={{ site.hashtag }}&url={{ site.github.url }}{{ page.url }}&text={{ page.title }}">
+                    Tweet
+                  </a>
+                </div>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfR5ZjmZf2N5hr53SR_Q5yB6d02VtgFdNgnMFgcUwW049OGDg/viewform" target="_blank">
+                  <div class="letter_btn">
+                    おたより
+                  </div>
+                </a>
+                <p class="text-right">
+                  <small>
+                    <a href="{{ page.audio_file_path }}" target="_blank">MP3ファイルをダウンロード</a>
+                  </small>
+                </p>
+            </div>
             <h2>
               内容紹介
             </h2>
