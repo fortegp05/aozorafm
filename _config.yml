@@ -115,6 +115,10 @@ actors:
     image_url: /images/actors/shucho0103.jpg
     name: しゅういちろ
     url: https://twitter.com/shucho0103
+  kobayashi_tech:
+    image_url: /images/actors/kobayashi_tech.jpg
+    name: コバヤシ リョウタ
+    url: https://twitter.com/kobayashi_tech
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
@@ -165,8 +169,8 @@ info_author_ids:
 info_author:
   info1:
     title: 「はじめる技術 つづける技術」
-    content: 技術書典6にて何かを始める、続けるためのノウハウ本を頒布予定!
-    url: https://fortegp05.hatenablog.com/entry/2019/03/28/094500
+    content: 技術書典6の新刊!何かを始める、続けるためのノウハウ本!
+    url: https://booth.pm/ja/items/1300082
     img: https://cdn-ak.f.st-hatena.com/images/fotolife/f/fortegp05/20190327/20190327235022.jpg
   info2:
     title: 「すぱきゃす」への参加募集!
