@@ -127,6 +127,18 @@ actors:
     image_url: /images/actors/ykokubo09.jpg
     name: ykokubo09
     url: https://twitter.com/ykokubo09
+  nemu1986:
+    image_url: /images/actors/nemu1986.jpg
+    name: nemu1986
+    url: https://twitter.com/nemu1986
+  mottox2:
+    image_url: /images/actors/mottox2.jpg
+    name: mottox2
+    url: https://twitter.com/mottox2
+  sapi_kawahara:
+    image_url: /images/actors/sapi_kawahara.jpg
+    name: sapi_kawahara
+    url: https://twitter.com/sapi_kawahara
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
