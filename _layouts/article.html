@@ -13,7 +13,12 @@
               </a>
             </h1>
             <div class="article-header-note">
-              {{ page.date | date: "%Y年%m月%d日" }}
+              <p>
+                  {{ page.date | date: "%Y年%m月%d日" }}
+              </p>
+              <p style="font-size: small">
+                  (収録日：{{ page.rec_date | date: "%Y年%m月%d日" }})
+              </p>
             </div>
           </header>
           <section class="card-body markdown">
@@ -42,7 +47,7 @@
                 </a>
                 <p class="text-right">
                   <small>
-                    <a href="{{ page.audio_file_path }}" target="_blank">MP3ファイルをダウンロード</a>
+                    <a href="{{ page.audio_file_path }}" style="font-size: smaller" target="_blank">MP3ファイルをダウンロード</a>
                   </small>
                 </p>
             </div>
