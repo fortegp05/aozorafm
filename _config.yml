@@ -155,6 +155,14 @@ actors:
     image_url: /images/actors/ihirhs.jpg
     name: ihirhs
     url: https://twitter.com/ihirhs
+  zucky_zakizaki:
+    image_url: /images/actors/zucky_zakizaki.jpg
+    name: zucky_zakizaki
+    url: https://twitter.com/zucky_zakizaki
+  midono_ap1:
+    image_url: /images/actors/midono_ap1.jpg
+    name: midono_ap1
+    url: https://twitter.com/midono_ap1
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
