@@ -29,17 +29,6 @@
         <link>{{ site.github.url }}{{ post.url }}</link>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <description>
-
-          {{ "<h2>チャプター</h2>" | xml_escape }}
-          {{ "<ul>" | xml_escape }}
-            {% for chaps_id in post.chapter_ids %}
-              {% assign chaps = post.chapter[chaps_id] %}
-              {{ "<li>" | xml_escape }}
-                  {{ chaps.time | xml_escape }} {{ chaps.title | xml_escape }}
-              {{ "</li>" | xml_escape }}
-            {% endfor %}
-          {{ "</ul>" | xml_escape }}
-          
           {{ "<h2>ゲストからの告知</h2>" | xml_escape }}
           {{ "<ul>" | xml_escape }}
           {% for info_guest_id in post.info_guest_ids %}
@@ -61,6 +50,16 @@
           {{ "</ul>" | xml_escape }}
           
           {{ post.content | xml_escape }}
+
+          {{ "<h2>チャプター</h2>" | xml_escape }}
+          {{ "<ul>" | xml_escape }}
+            {% for chaps_id in post.chapter_ids %}
+              {% assign chaps = post.chapter[chaps_id] %}
+              {{ "<li>" | xml_escape }}
+                  {{ chaps.time | xml_escape }} {{ chaps.title | xml_escape }}
+              {{ "</li>" | xml_escape }}
+            {% endfor %}
+          {{ "</ul>" | xml_escape }}
         </description>
         <guid isPermaLink="true">{{ site.github.url }}{{ post.url }}</guid>
         <enclosure url="{{ post.audio_file_path }}" length="{{ post.audio_file_size }}" type="audio/mp3"/>

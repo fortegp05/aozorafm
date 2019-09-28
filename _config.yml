@@ -210,12 +210,13 @@ info_author_ids:
   - info2
   - info3
   - info4
+  - info5
 info_author:
   info1:
-    title: 「はじめる技術 つづける技術」
-    content: 技術書典6の新刊!何かを始める、続けるためのノウハウ本!
-    url: https://booth.pm/ja/items/1300082
-    img: https://cdn-ak.f.st-hatena.com/images/fotolife/f/fortegp05/20190327/20190327235022.jpg
+    title: 入門!実践!サーバーサイドKotlin
+    content: 技術書典7の新刊!サーバーサイドKotlin本!
+    url: https://techbookfest.org/event/tbf07/circle/5754479999713280
+    img: https://lh3.googleusercontent.com/nH5_T7hakGOsKY62UIFSXPRPWdw-w7rqAVkfAnrA16HMGLk02zmzmCB0yG-TPB3WlpMaVc5jRXH0H2ZGksyb
   info2:
     title: 「すぱきゃす」への参加募集!
     content: Podcastコミュニティで聴取会や公録など実施中!詳しくはこちら!
@@ -231,3 +232,8 @@ info_author:
     content: クリックでQRコード表示、金額はお気持ちで!
     url: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
     img: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
+  info5:
+    title: 新刊と既刊の電子本はBOOTHにて!
+    content: 既刊「はじめる技術 つづける技術」
+    url: https://fortegp05.booth.pm/
+    img: https://cdn-ak.f.st-hatena.com/images/fotolife/f/fortegp05/20190327/20190327235022.jpg
