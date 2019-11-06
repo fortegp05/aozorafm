@@ -192,6 +192,7 @@ supporter_ids:
   - MzRyuKa
   - yahsan2
   - goodengineer7
+  - mamehacker
 supporters: 
   MzRyuKa:
     image_url: /images/supporters/MzRyuKa.PNG
@@ -205,6 +206,10 @@ supporters:
     image_url: /images/supporters/goodengineer7.jpg
     name: S(エス)
     url: https://twitter.com/goodengineer7
+  mamehacker:
+    image_url: /images/supporters/mamehacker.jpg
+    name: まめハッカー
+    url: https://twitter.com/mamehacker
 info_author_ids:
   - info1
   - info2
