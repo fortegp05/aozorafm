@@ -199,6 +199,10 @@ actors:
     image_url: /images/actors/amarelo.jpg
     name: amarelo
     url: https://twitter.com/amarelo
+  nano2_aloerina:
+    image_url: /images/actors/nano2_aloerina.jpg
+    name: なのなの
+    url: https://twitter.com/nano2_aloerina
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
@@ -253,10 +257,10 @@ info_author_ids:
   - info4
 info_author:
   info1:
-    title: 新刊「もっと実践!サーバーサイドKotlin」
+    title: 新刊「いろいろ実践!サーバーサイドKotlin Vol.1」
     content: 既刊もよろしくね!
     url: https://fortegp05.booth.pm/
-    img: https://cdn-ak.f.st-hatena.com/images/fotolife/f/fortegp05/20200307/20200307171127.jpg
+    img: https://booth.pximg.net/c/620x620/874677c2-9421-47c1-9600-0c95d934d384/i/2375752/cd790085-56c6-4081-b89a-ff0d3a879a4f_base_resized.jpg
   info2:
     title: 「すぱきゃす」への参加募集!
     content: Podcastコミュニティで聴取会や公録など実施中!詳しくはこちら!
