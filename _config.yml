@@ -281,25 +281,13 @@ supporters:
 info_author_ids:
   - info1
   - info2
-  - info3
-  - info4
 info_author:
   info1:
-    title: 新刊「いろいろ実践!サーバーサイドKotlin Vol.1」
+    title: 新刊「入門!実践!Kotlin Compose Multiplatformでデスクトップアプリ開発!」
     content: 既刊もよろしくね!
-    url: https://fortegp05.booth.pm/
-    img: https://booth.pximg.net/c/620x620/874677c2-9421-47c1-9600-0c95d934d384/i/2375752/cd790085-56c6-4081-b89a-ff0d3a879a4f_base_resized.jpg
+    url: https://fortegp05.booth.pm/items/5237390
+    img: https://s2.booth.pm/874677c2-9421-47c1-9600-0c95d934d384/i/5237390/ecd41f46-6274-456b-8ff5-85273d355b01_base_resized.jpg
   info2:
-    title: 「すぱきゃす」への参加募集!
-    content: Podcastコミュニティで聴取会や公録など実施中!詳しくはこちら!
-    url: https://fortegp05.hatenablog.com/entry/2019/01/07/221830
-    img: https://cdn.image.st-hatena.com/image/scale/8ddad46294804bfb40730d9d691d57ee149cfdf7/backend=imager;enlarge=0;height=1000;version=1;width=1200/https%3A%2F%2Fcdn.user.blog.st-hatena.com%2Fdefault_entry_og_image%2F152987346%2F1544976200500180
-  info3:
-    title: poiit
-    content: aozora.fmのスポンサー募集!
-    url: https://poiit.me/FORTEgp05
-    img: https://poiit.me/ogp.jpg
-  info4:
     title: Kyashでも支援募集中!
     content: クリックでQRコード表示、金額はお気持ちで!
     url: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
