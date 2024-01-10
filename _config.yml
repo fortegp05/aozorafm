@@ -285,6 +285,8 @@ supporters:
 info_author_ids:
   - info1
   - info2
+  - info3
+  - info4
 info_author:
   info1:
     title: 新刊「入門!実践!Kotlin Compose Multiplatformでデスクトップアプリ開発!」
@@ -296,3 +298,13 @@ info_author:
     content: クリックでQRコード表示、金額はお気持ちで!
     url: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
     img: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
+  info3:
+    title: PIXIV FANBOXでも支援募集中!
+    content: 月額制で構わないという方は是非!
+    url: https://fortegp05.fanbox.cc
+    img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
+  info4:
+    title: OFUSEでも支援募集中!
+    content: 月額ではなく1回だけ支援したい方はこちら!
+    url: https://ofuse.me/fortegp05
+    img: https://fortegp05.github.io/aozorafm/images/ofuse_qrcode.png
