@@ -7,6 +7,11 @@
     <link>{{ site.github.url }}/</link>
     <title>{{ site.title }}</title>
     <description>{{ site.description_rss | xml_escape }}</description>
+    <image>
+      <url>{{ site.github.url }}/images/artwork.jpg</url>
+      <title>{{ site.title }}</title>
+      <link>{{ site.github.url }}/</link>
+    </image>
     <media:keywords>{{ site.keywords }}</media:keywords>
     <media:category scheme="http://www.itunes.com/dtds/podcast-1.0.dtd">Technology</media:category>
     <language>{{ site.language }}</language>
