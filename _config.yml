@@ -235,6 +235,10 @@ actors:
     image_url: /images/actors/rhodium.jpg
     name: ロジウム
     url: https://twitter.com/_rhodium_
+  uutan1108:
+    image_url: /images/actors/uutan1108.jpg
+    name: うーたん
+    url: https://twitter.com/uutan1108
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
