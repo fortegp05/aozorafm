@@ -239,6 +239,10 @@ actors:
     image_url: /images/actors/uutan1108.jpg
     name: うーたん
     url: https://twitter.com/uutan1108
+  rabspice:
+    image_url: /images/actors/rabspice.jpg
+    name: yugo.spice.ogura
+    url: https://twitter.com/rabspice
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
@@ -270,6 +274,7 @@ supporter_ids:
   - yahsan2
   - goodengineer7
   - mamehacker
+  - uutan1108
 supporters: 
   MzRyuKa:
     image_url: /images/supporters/MzRyuKa.PNG
@@ -287,6 +292,10 @@ supporters:
     image_url: /images/supporters/mamehacker.jpg
     name: まめハッカー
     url: https://twitter.com/mamehacker
+  uutan1108:
+    image_url: /images/actors/uutan1108.jpg
+    name: うーたん
+    url: https://twitter.com/uutan1108
 info_author_ids:
   - info1
   - info2
