@@ -243,6 +243,10 @@ actors:
     image_url: /images/actors/rabspice.jpg
     name: yugo.spice.ogura
     url: https://twitter.com/rabspice
+  DAfurimacyan:
+    image_url: /images/actors/DAfurimacyan.jpg
+    name: かわのDA
+    url: https://twitter.com/DAfurimacyan
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
@@ -301,23 +305,29 @@ info_author_ids:
   - info2
   - info3
   - info4
+  - info5
 info_author:
   info1:
+    title: aozora.fmではゲストやお便りを募集中!
+    content: フォームから送れます!
+    url: https://docs.google.com/forms/d/e/1FAIpQLSfR5ZjmZf2N5hr53SR_Q5yB6d02VtgFdNgnMFgcUwW049OGDg/viewform
+    img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
+  info2:
     title: 新刊「ITエンジニアとして生きる技術」
     content: 既刊もよろしくね!
     url: https://fortegp05.hatenablog.com/entry/2024/05/20/214849
     img: https://cdn-ak.f.st-hatena.com/images/fotolife/f/fortegp05/20240520/20240520212018.png
-  info2:
+  info3:
     title: Kyashでも支援募集中!
     content: クリックでQRコード表示、金額はお気持ちで!
     url: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
     img: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
-  info3:
+  info4:
     title: PIXIV FANBOXでも支援募集中!
     content: 月額制で構わないという方は是非!
     url: https://fortegp05.fanbox.cc
     img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
-  info4:
+  info5:
     title: OFUSEでも支援募集中!
     content: 月額ではなく1回だけ支援したい方はこちら!
     url: https://ofuse.me/fortegp05
