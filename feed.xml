@@ -38,7 +38,7 @@
 
           <p>{{ post.description }}</p>
 
-          <h2>チャプター</h2>
+          <p>チャプター</p>
           <ul>
             {% for chaps_id in post.chapter_ids %}
               {% assign chaps = post.chapter[chaps_id] %}
@@ -48,7 +48,7 @@
             {% endfor %}
           </ul>
 
-          <h2>ゲストからの告知</h2>
+          <p>ゲストからの告知</p>
           <ul>
           {% for info_guest_id in post.info_guest_ids %}
             {% assign info = post.info_guest[info_guest_id] %}
@@ -58,7 +58,7 @@
           {% endfor %}
           </ul>
 
-          <h2>{{ site.author | xml_escape }}からの告知</h2>
+          <p>{{ site.author | xml_escape }}からの告知</p>
           <ul>
           {% for info_author_id in site.info_author_ids %}
             {% assign info = site.info_author[info_author_id] %}
@@ -68,7 +68,7 @@
           {% endfor %}
           </ul>
 
-          {{ post.content }}
+          {{ post.content | replace: '<h2 ', '<p ' | replace: '</h2>', '</p>' }}
 
           ]]>
         </description>
