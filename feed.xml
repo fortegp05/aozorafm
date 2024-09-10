@@ -47,6 +47,7 @@
               </li>
             {% endfor %}
           </ul>
+          <br>
 
           <p>ゲストからの告知</p>
           <ul>
@@ -57,6 +58,7 @@
             </li>
           {% endfor %}
           </ul>
+          <br>
 
           <p>{{ site.author | xml_escape }}からの告知</p>
           <ul>
@@ -67,6 +69,7 @@
             </li>
           {% endfor %}
           </ul>
+          <br>
 
           {{ post.content | replace: '<h2 ', '<p ' | replace: '</h2>', '</p>' }}
 
