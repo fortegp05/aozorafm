@@ -27,51 +27,57 @@
     </itunes:owner>
     <itunes:image href="{{ site.github.url }}/images/artwork.jpg" />
     <itunes:category text="Technology"/>
-    <itunes:explicit>no</itunes:explicit>
+    <itunes:explicit>false</itunes:explicit>
     {% for post in site.posts %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <link>{{ site.github.url }}{{ post.url }}</link>
         <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
         <description>
-          {{ "<h2>ゲストからの告知</h2>" | xml_escape }}
-          {{ "<ul>" | xml_escape }}
-          {% for info_guest_id in post.info_guest_ids %}
-            {% assign info = post.info_guest[info_guest_id] %}
-            {{ "<li>" | xml_escape }}
-              {{ "<a href='" | xml_escape }}{{ info.url | xml_escape }}{{ "'>" | xml_escape }}{{ info.title | xml_escape }}{{ "</a>" | xml_escape }}
-            {{ "</li>" | xml_escape }}
-          {% endfor %}
-          {{ "</ul>" | xml_escape }}
+          <![CDATA[
 
-          {{ "<h2>FORTEからの告知</h2>" | xml_escape }}
-          {{ "<ul>" | xml_escape }}
-          {% for info_author_id in site.info_author_ids %}
-            {% assign info = site.info_author[info_author_id] %}
-            {{ "<li>" | xml_escape }}
-              {{ "<a href='" | xml_escape }}{{ info.url | xml_escape }}{{ "'>" | xml_escape }}{{ info.title | xml_escape }}{{ "</a>" | xml_escape }}
-            {{ "</li>" | xml_escape }}
-          {% endfor %}
-          {{ "</ul>" | xml_escape }}
-          
-          {{ post.content | xml_escape }}
+          <p>{{ post.description }}</p>
 
-          {{ "<h2>チャプター</h2>" | xml_escape }}
-          {{ "<ul>" | xml_escape }}
+          <h2>チャプター</h2>
+          <ul>
             {% for chaps_id in post.chapter_ids %}
               {% assign chaps = post.chapter[chaps_id] %}
-              {{ "<li>" | xml_escape }}
+              <li>
                   {{ chaps.time | xml_escape }} {{ chaps.title | xml_escape }}
-              {{ "</li>" | xml_escape }}
+              </li>
             {% endfor %}
-          {{ "</ul>" | xml_escape }}
+          </ul>
+
+          <h2>ゲストからの告知</h2>
+          <ul>
+          {% for info_guest_id in post.info_guest_ids %}
+            {% assign info = post.info_guest[info_guest_id] %}
+            <li>
+              <a href='{{ info.url | xml_escape }}'>{{ info.title | xml_escape }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+
+          <h2>{{ site.author | xml_escape }}からの告知</h2>
+          <ul>
+          {% for info_author_id in site.info_author_ids %}
+            {% assign info = site.info_author[info_author_id] %}
+            <li>
+              <a href='{{ info.url | xml_escape }}'>{{ info.title | xml_escape }}</a>
+            </li>
+          {% endfor %}
+          </ul>
+
+          {{ post.content }}
+
+          ]]>
         </description>
         <guid isPermaLink="true">{{ site.github.url }}{{ post.url }}</guid>
         <enclosure url="{{ post.audio_file_path }}" length="{{ post.audio_file_size }}" type="audio/mp3"/>
         <itunes:author>{{ site.author }}</itunes:author>
-        <itunes:subtitle>{{ post.description }}</itunes:subtitle>
+        <itunes:subtitle>{{ post.description | xml_escape }}</itunes:subtitle>
         <itunes:duration>{{ post.duration }}</itunes:duration>
-        <itunes:explicit>no</itunes:explicit>
+        <itunes:explicit>false</itunes:explicit>
         <itunes:image href="{{ site.github.url }}/images/artwork.jpg"/>
         <media:thumbnail url="{{ site.github.url }}/images/artwork.jpg"/>
       </item>
