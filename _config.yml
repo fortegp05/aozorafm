@@ -310,12 +310,12 @@ info_author_ids:
 info_author:
   info1:
     title: aozora.fmではゲストやお便りを募集中!
-    content: フォームから送れます!
+    content: リンク先のフォームから送れます!
     url: https://docs.google.com/forms/d/e/1FAIpQLSfR5ZjmZf2N5hr53SR_Q5yB6d02VtgFdNgnMFgcUwW049OGDg/viewform
-    img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
+    img: https://fortegp05.github.io/aozorafm/images/artwork.jpg
   info2:
     title: 新刊「ITエンジニアとして生きる技術」
-    content: 既刊もよろしくね!
+    content: リンク先に一覧あります!既刊もよろしく!
     url: https://fortegp05.hatenablog.com/entry/2024/05/25/161409
     img: https://cdn-ak.f.st-hatena.com/images/fotolife/f/fortegp05/20240520/20240520212018.png
   info3:
@@ -325,16 +325,16 @@ info_author:
     img: https://fortegp05.github.io/aozorafm/images/kyash_qr_fortegp05.JPG
   info4:
     title: PIXIV FANBOXでも支援募集中!
-    content: 月額制で構わないという方は是非!
+    content: 月額制で構わないという方は是非リンク先から!
     url: https://fortegp05.fanbox.cc
     img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
   info5:
     title: OFUSEでも支援募集中!
-    content: 月額ではなく1回だけ支援したい方はこちら!
+    content: 月額ではなく1回だけ支援したい方はこのリンク先へ!
     url: https://ofuse.me/fortegp05
     img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
   info6:
-    title: ITエンジニアの副業先を探してます!
-    content: このブログ記事を見てビビっと来たらご連絡お願いします!
+    title: ITエンジニアのお仕事を募集中!
+    content: 詳細や連絡先はリンク先のブログ記事からお願いします!
     url: https://fortegp05.hatenablog.com/entry/2024/08/18/191629
     img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
