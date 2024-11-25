@@ -251,6 +251,10 @@ actors:
     image_url: /images/actors/out_of_kaya.jpg
     name: ぱんだおじさん
     url: https://twitter.com/out_of_kaya
+  petit_zome:
+    image_url: /images/actors/petit_zome.jpg
+    name: シロ
+    url: https://twitter.com/petit_zome
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
