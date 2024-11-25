@@ -34,22 +34,28 @@
         </section>
         <section class="column-small-4 footer-sections-element">
           <h1 class="footer-sections-element-heading">
-            購読
+            配信サイト
           </h1>
           <div class="footer-sections-element-description">
-            新しいエピソードの配信を購読できます。
+            新しいエピソードの配信を聞いたりフォローや購読ができます。
           </div>
           <ul>
             {% if site.itunes_podcast_url %}
               <li>
-                <a href="{{ site.itunes_podcast_url }}" target="_blank">iTunesで購読</a>
+                <a href="{{ site.itunes_podcast_url }}" target="_blank">iTunes</a>
               </li>
             {% endif %}
             <li>
-              <a href="http://subscribeonandroid.com/{{ site.github.url | remove: "https://" | remove: "http://" }}/feed.xml" target="_blank">Androidで購読</a>
+              <a href="https://open.spotify.com/show/6jtUYZTOUC03rOuefQMVH8" target="_blank">Spotify</a>
             </li>
             <li>
-              <a href="https://push.dog/subscribe?url={{ site.github.url }}/feed.xml" target="_blank">Pushdogで購読</a>
+              <a href="https://www.youtube.com/playlist?list=PLoTNF32jZTB69_mi0CWHn82VSKl1r2UaK" target="_blank">Youtube</a>
+            </li>
+            <li>
+              <a href="https://music.amazon.com/es-cl/podcasts/c36230b0-79db-4abd-9240-b4e19f10e52c/aozora-fm" target="_blank">amazon music</a>
+            </li>
+            <li>
+              <a href="https://listen.style/p/aozorafm" target="_blank">LISTEN</a>
             </li>
             <li>
               <a href="{{ site.github.url }}/feed.xml" target="_blank">RSSで購読</a>
