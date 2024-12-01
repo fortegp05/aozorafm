@@ -255,6 +255,10 @@ actors:
     image_url: /images/actors/petit_zome.jpg
     name: シロ
     url: https://twitter.com/petit_zome
+  lsetzl_it:
+    image_url: /images/actors/lsetzl_it.png
+    name: せつ
+    url: https://twitter.com/lsetzl_it
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
