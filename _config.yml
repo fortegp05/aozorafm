@@ -259,6 +259,10 @@ actors:
     image_url: /images/actors/lsetzl_it.png
     name: せつ
     url: https://twitter.com/lsetzl_it
+  lizhi05853:
+    image_url: /images/actors/lizhi05853.jpg
+    name: ゆーき
+    url: https://twitter.com/lizhi05853
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
