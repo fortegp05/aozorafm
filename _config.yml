@@ -268,9 +268,9 @@ actors:
     name: Sumire🧀
     url: https://twitter.com/Sumirecheese
 author: FORTE
-description: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。
-description_rss: aozora.fmは仕事や趣味の楽しさを共有するpodcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
-description_long: 仕事や趣味の楽しさを共有するpodcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>まで連絡ください。
+description: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。
+description_rss: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
+description_long: 仕事や趣味の楽しさを共有する雑談系Podcastです。aozora.fmはゲストさんを募集しています。いま楽しんでいることを語りたい!Podcast楽しそうだから出たい!という方、お気軽に<a href="https://twitter.com/FORTEgp05" target="_blank">@FORTEgp05</a>か<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfR5ZjmZf2N5hr53SR_Q5yB6d02VtgFdNgnMFgcUwW049OGDg/viewform">お便りフォーム</a>まで連絡ください。
 email: fortegp05@hotmail.com
 exclude:
   - docker
