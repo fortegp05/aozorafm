@@ -271,6 +271,10 @@ actors:
     image_url: /images/actors/G_OVER_N_GAME.jpg
     name: YUSUKE｜ゲームライフレベルアップ
     url: https://twitter.com/G_OVER_N_GAME
+  CS_engineerSA:
+    image_url: /images/actors/CS_engineerSA.jpg
+    name: Yamazoe Haruki
+    url: https://twitter.com/CS_engineerSA
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
