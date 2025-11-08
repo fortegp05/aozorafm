@@ -283,6 +283,10 @@ actors:
     image_url: /images/actors/kotori14141414.jpg
     name: ことり
     url: https://twitter.com/kotori14141414
+  CoMin_Sketch:
+    image_url: /images/actors/CoMin_Sketch.jpg
+    name: こみん(Yamakawa)
+    url: https://twitter.com/CoMin_Sketch
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
@@ -364,7 +368,7 @@ info_author:
     url: https://ofuse.me/fortegp05
     img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
   info5:
-    title: ITエンジニアのお仕事を募集中!
-    content: 詳細や連絡先はリンク先のブログ記事からお願いします!
-    url: https://fortegp05.hatenablog.com/entry/2024/08/18/191629
-    img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
+    title: お仕事募集中!
+    content: IT、音声、ライターなど！
+    url: https://note.com/fortegp05/n/nedaaad52505d
+    img: https://assets.st-note.com/production/uploads/images/214645132/rectangle_large_type_2_320403217cfd5ff339be270198c0afd7.png
