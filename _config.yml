@@ -346,6 +346,7 @@ info_author_ids:
   - info3
   - info4
   - info5
+  - info6
 info_author:
   info1:
     title: aozora.fmではゲストやお便りを募集中!
@@ -368,6 +369,11 @@ info_author:
     url: https://ofuse.me/fortegp05
     img: https://fortegp05.github.io/aozorafm/images/noimages.jpg
   info5:
+    title: rooom aozora
+    content: Podcastのメンバーシップサービス
+    url: https://rooom.listen.style/p/aozorafm
+    img: https://fortegp05.github.io/aozorafm/images/rooom_top_img.jpg
+  info6:
     title: お仕事募集中!
     content: IT、音声、ライターなど！
     url: https://note.com/fortegp05/n/nedaaad52505d
