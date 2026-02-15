@@ -310,9 +310,15 @@ exclude:
   - vendor
 google_analytics: UA-109580420-3
 hashtag: aozorafm
-itunes_podcast_url: https://fortegp05.github.io/aozorafm/feed.xml
+itunes_podcast_url: https://podcasts.apple.com/us/podcast/aozora-fm/id1443168521
 keywords: podcast,ポッドキャスト,ITエンジニア,趣味,楽しいこと,楽しむ,
 language: ja
+# 配信サービスURL
+platforms:
+  spotify: https://open.spotify.com/show/6jtUYZTOUC03rOuefQMVH8
+  youtube: https://www.youtube.com/playlist?list=PLoTNF32jZTB69_mi0CWHn82VSKl1r2UaK
+  amazon_music: https://music.amazon.com/es-cl/podcasts/c36230b0-79db-4abd-9240-b4e19f10e52c/aozora-fm
+  listen: https://listen.style/p/aozorafm
 markdown: kramdown
 permalink: /episode/:title
 sass:

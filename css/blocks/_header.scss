@@ -29,4 +29,50 @@
     padding-bottom: 96px;
     padding-top: 96px;
   }
+
+  // Podcast配信サービスアイコン
+  &-platforms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    margin-top: 24px;
+
+    @media (max-width: $width-screen-extra-small-maximum) {
+      gap: 12px;
+      margin-top: 20px;
+    }
+  }
+
+  &-platforms-link {
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.1);
+      opacity: 0.85;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &-platforms-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+
+    @media (max-width: $width-screen-extra-small-maximum) {
+      width: 29px;
+      height: 29px;
+    }
+
+    @media (max-width: 375px) {
+      width: 26px;
+      height: 26px;
+    }
+  }
 }
