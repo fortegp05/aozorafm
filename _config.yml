@@ -303,6 +303,10 @@ actors:
     image_url: /images/actors/hk_it7.jpg
     name: hk(こうの)
     url: https://twitter.com/hk_it7
+  kuwahara_jsr_2:
+    image_url: /images/actors/kuwahara_jsri_2.jpg
+    name: ɥʇǝǝʞʞ@カミナシ🐐
+    url: https://twitter.com/kuwahara_jsri
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
