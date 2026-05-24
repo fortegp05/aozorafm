@@ -311,6 +311,10 @@ actors:
     image_url: /images/actors/towel005towel.jpg
     name: towel
     url: https://twitter.com/towel005towel
+  _mi_lin_:
+    image_url: /images/actors/_mi_lin_.jpg
+    name: hikari@復職
+    url: https://twitter.com/_mi_lin_
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
