@@ -8,14 +8,23 @@
 .PARAMETER NumArg
     Post number as an integer, any number of digits (second argument)
 
+.PARAMETER RecDateArg
+    Recording date in yyyy-mm-dd format (third argument, optional).
+    Defaults to today's date if not specified.
+
 .EXAMPLE
     ./new_post.ps1 20260706 350
-    -> creates ./_posts/2026-07-06-350.md
+    -> creates ./_posts/2026-07-06-350.md with today's date as rec_date
+
+.EXAMPLE
+    ./new_post.ps1 20260706 350 2026-07-04
+    -> creates ./_posts/2026-07-06-350.md with rec_date: 2026-07-04
 #>
 
 param(
     [string]$DateArg,
-    [string]$NumArg
+    [string]$NumArg,
+    [string]$RecDateArg
 )
 
 $ErrorActionPreference = 'Stop'
@@ -23,7 +32,7 @@ $ErrorActionPreference = 'Stop'
 # --- Argument validation ---
 
 if ([string]::IsNullOrEmpty($DateArg) -or [string]::IsNullOrEmpty($NumArg)) {
-    Write-Error "Usage: ./new_post.ps1 <yyyymmdd> <xxx>"
+    Write-Error "Usage: ./new_post.ps1 <yyyymmdd> <xxx> [yyyy-mm-dd]"
     exit 1
 }
 
@@ -34,6 +43,14 @@ if ($DateArg -notmatch '^\d{8}$') {
 
 if ($NumArg -notmatch '^\d+$') {
     Write-Error "Second argument must be an integer: $NumArg"
+    exit 1
+}
+
+if ([string]::IsNullOrEmpty($RecDateArg)) {
+    $RecDateArg = Get-Date -Format 'yyyy-MM-dd'
+}
+elseif ($RecDateArg -notmatch '^\d{4}-\d{2}-\d{2}$') {
+    Write-Error "Third argument must be in yyyy-mm-dd format: $RecDateArg"
     exit 1
 }
 
@@ -102,6 +119,7 @@ $content = [System.IO.File]::ReadAllText($destPath, $utf8NoBom)
 $content = $content -replace '(?m)(^audio_file_path:.*)yyyymmdd', ('${1}' + $DateArg)
 $content = $content -replace '(?m)(^audio_file_size:\s*)$', ('${1}' + $audioFileSize)
 $content = $content -replace '(?m)(^date:\s*)yyyy-mm-dd', ('${1}' + "$yyyy-$mm-$dd")
+$content = $content -replace '(?m)^rec_date:.*$', ('rec_date: ' + $RecDateArg)
 $content = $content -replace '(?m)^duration:.*$', ('duration: "' + $duration + '"')
 $content = $content -replace '(?m)(^title:.*?)xxx', ('${1}' + $NumArg)
 
