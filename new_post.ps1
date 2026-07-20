@@ -9,7 +9,7 @@
     Post number as an integer, any number of digits (second argument)
 
 .PARAMETER RecDateArg
-    Recording date in yyyy-mm-dd format (third argument, optional).
+    Recording date in yyyymmdd format, 8 digits (third argument, optional).
     Defaults to today's date if not specified.
 
 .EXAMPLE
@@ -17,7 +17,7 @@
     -> creates ./_posts/2026-07-06-350.md with today's date as rec_date
 
 .EXAMPLE
-    ./new_post.ps1 20260706 350 2026-07-04
+    ./new_post.ps1 20260706 350 20260704
     -> creates ./_posts/2026-07-06-350.md with rec_date: 2026-07-04
 #>
 
@@ -32,7 +32,7 @@ $ErrorActionPreference = 'Stop'
 # --- Argument validation ---
 
 if ([string]::IsNullOrEmpty($DateArg) -or [string]::IsNullOrEmpty($NumArg)) {
-    Write-Error "Usage: ./new_post.ps1 <yyyymmdd> <xxx> [yyyy-mm-dd]"
+    Write-Error "Usage: ./new_post.ps1 <yyyymmdd> <xxx> [yyyymmdd]"
     exit 1
 }
 
@@ -49,9 +49,12 @@ if ($NumArg -notmatch '^\d+$') {
 if ([string]::IsNullOrEmpty($RecDateArg)) {
     $RecDateArg = Get-Date -Format 'yyyy-MM-dd'
 }
-elseif ($RecDateArg -notmatch '^\d{4}-\d{2}-\d{2}$') {
-    Write-Error "Third argument must be in yyyy-mm-dd format: $RecDateArg"
+elseif ($RecDateArg -notmatch '^\d{8}$') {
+    Write-Error "Third argument must be in yyyymmdd format (8 digits): $RecDateArg"
     exit 1
+}
+else {
+    $RecDateArg = $RecDateArg.Substring(0, 4) + '-' + $RecDateArg.Substring(4, 2) + '-' + $RecDateArg.Substring(6, 2)
 }
 
 $yyyy = $DateArg.Substring(0, 4)

@@ -13,7 +13,7 @@ actors:
     url: https://twitter.com/kuwahara_jsri
   anchor_cable:
     image_url: /images/actors/anchor_cable.jpg
-    name: 脱脂綿
+    name: Tomoya Inoue / だっしー
     url: https://twitter.com/anchor_cable
   hekitter:
     image_url: /images/actors/hekitter.jpg
@@ -319,6 +319,10 @@ actors:
     image_url: /images/actors/mossann_t.jpg
     name: もっさん
     url: https://twitter.com/_mossann_t
+  asagayanaoki:
+    image_url: /images/actors/asagayanaoki.jpg
+    name: 幡ヶ谷亭直吉
+    url: https://twitter.com/asagayanaoki
 author: FORTE
 description: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。
 description_rss: aozora.fmは仕事や趣味の楽しさを共有する雑談系Podcastです。ポッドキャストの書き起こしサービス「LISTEN」はこちら https://listen.style/p/aozorafm?bXdsUTvS
