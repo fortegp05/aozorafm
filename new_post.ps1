@@ -12,6 +12,12 @@
     Recording date in yyyymmdd format, 8 digits (third argument, optional).
     Defaults to today's date if not specified.
 
+.PARAMETER Title
+    Replaces <title> in the title line (optional). The "350. " prefix is kept.
+
+.PARAMETER Description
+    Value for the description line (optional). Written double-quoted.
+
 .EXAMPLE
     ./new_post.ps1 20260706 350
     -> creates ./_posts/2026-07-06-350.md with today's date as rec_date
@@ -19,15 +25,28 @@
 .EXAMPLE
     ./new_post.ps1 20260706 350 20260704
     -> creates ./_posts/2026-07-06-350.md with rec_date: 2026-07-04
+
+.EXAMPLE
+    ./new_post.ps1 20260706 350 -Title "#hoge" -Description "今回の概要"
+    -> creates ./_posts/2026-07-06-350.md with title: "350. #hoge" and description: "今回の概要"
+
+.EXAMPLE
+    ./new_post.ps1 20260706 350 20260704 -Title "#hoge" -Description "今回の概要"
+    -> same as above, with rec_date: 2026-07-04
 #>
 
 param(
     [string]$DateArg,
     [string]$NumArg,
-    [string]$RecDateArg
+    [string]$RecDateArg,
+    [string]$Title,
+    [string]$Description
 )
 
 $ErrorActionPreference = 'Stop'
+
+# R2 bucket that serves https://aozorafm.win/
+$R2Bucket = 'aozorafm-audio'
 
 # --- Argument validation ---
 
@@ -126,6 +145,60 @@ $content = $content -replace '(?m)^rec_date:.*$', ('rec_date: ' + $RecDateArg)
 $content = $content -replace '(?m)^duration:.*$', ('duration: "' + $duration + '"')
 $content = $content -replace '(?m)(^title:.*?)xxx', ('${1}' + $NumArg)
 
+if (-not [string]::IsNullOrEmpty($Title)) {
+    # Double-quote the whole title so YAML special characters (: # etc.) stay safe.
+    $titleValue = $Title
+    $content = [regex]::Replace($content, '(?m)^title:[ \t]*(.*?)<title>(.*)$', {
+        param($m)
+        $full = $m.Groups[1].Value + $titleValue + $m.Groups[2].Value
+        $full = ($full -replace '\\', '\\' -replace '"', '\"') -replace '\r?\n', ' '
+        'title: "' + $full + '"'
+    })
+}
+
+if (-not [string]::IsNullOrEmpty($Description)) {
+    # Double-quote the value so YAML special characters (: # etc.) stay safe.
+    $descValue = ($Description -replace '\\', '\\' -replace '"', '\"') -replace '\r?\n', ' '
+    $content = [regex]::Replace($content, '(?m)^description:.*$', { param($m) 'description: "' + $descValue + '"' })
+}
+
 [System.IO.File]::WriteAllText($destPath, $content, $utf8NoBom)
 
 Write-Output "Created: $destPath"
+
+# --- Upload audio to R2 ---
+# Failures are reported and skipped; the post file is already created.
+
+$audioFileName = Split-Path $audioPath -Leaf
+$uploadError = $null
+
+try {
+    $prevEap = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        $uploadOutput = & npx.cmd --yes wrangler r2 object put "$R2Bucket/$audioFileName" `
+            --file $audioPath --content-type 'audio/mpeg' --remote 2>&1 | ForEach-Object { "$_" }
+        $uploadExit = $LASTEXITCODE
+    }
+    finally {
+        $ErrorActionPreference = $prevEap
+    }
+
+    if ($uploadExit -ne 0) {
+        $lines = @($uploadOutput | ForEach-Object { ($_ -replace '\x1b\[[0-9;]*m', '').Trim() } | Where-Object { $_ })
+        $errLines = @($lines | Where-Object { $_ -match 'error' })
+        $uploadError = if ($errLines.Count -gt 0) { $errLines[0] }
+                       elseif ($lines.Count -gt 0) { $lines[$lines.Count - 1] }
+                       else { "exit code $uploadExit" }
+    }
+}
+catch {
+    $uploadError = $_.Exception.Message
+}
+
+if ($uploadError) {
+    Write-Output "Upload error: $uploadError"
+}
+else {
+    Write-Output "Uploaded: https://aozorafm.win/$audioFileName"
+}
